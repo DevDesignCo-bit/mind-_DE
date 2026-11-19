@@ -1,0 +1,92 @@
+* { box-sizing: border-box; }
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  color: #12466c;
+  background: #eef5fc;
+  font-synthesis: none;
+}
+body { margin: 0; }
+a { color: inherit; text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #175e98; outline-offset: 4px; }
+.site { width: min(100%, 600px); min-height: 100svh; margin-inline: auto; background: #fff; }
+.site-header { min-height: 44px; display: grid; place-items: center; background: #96c7fa; }
+.brand { display: inline-flex; align-items: center; padding: 13px; }
+.brand img { display: block; width: 62px; height: auto; }
+.hero-art { position: relative; overflow: hidden; aspect-ratio: 390 / 357; background: #96c7fa; }
+.hero-art img { display: block; position: absolute; top: -12.325%; width: 100%; height: auto; }
+.offer-panel { text-align: center; }
+h1 {
+  margin: 0;
+  padding: 3px 18px 0;
+  background: #fefefe;
+  color: #171422;
+  font-size: clamp(1.7rem, 8.45vw, 2.375rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.025em;
+}
+.offer { margin-top: 0; padding: 31px 30px 0; background: linear-gradient(#f1f8fe, #fff 80%); }
+.cta {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  padding: 13px 18px;
+  border-radius: 7px;
+  background: #4199e2;
+  color: #fff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  animation: cta-pulse 2.6s ease-in-out infinite;
+}
+.cta:hover { background: #3289ce; }
+@keyframes cta-pulse { 50% { box-shadow: 0 0 0 5px rgb(65 153 226 / 16%); } }
+.price { margin: 6px 0 0; color: #666; font-size: .8125rem; line-height: 1.45; }
+.disclaimer { margin: clamp(48px, 17vw, 80px) 0 0; padding: 0 clamp(20px, 7.7vw, 40px); font-size: .875rem; line-height: 1.4; }
+.disclaimer p { margin: 0; }
+.site-footer { padding: clamp(48px, 18vw, 80px) 20px 18px; color: #444; text-align: center; }
+.site-footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 18px; }
+.site-footer nav a { display: inline-flex; align-items: center; min-height: 36px; max-width: 100%; font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
+.site-footer > p { margin: 22px 0 0; font-size: .8125rem; line-height: 1.4; }
+.imprint-page {
+  min-height: 100svh;
+  background: linear-gradient(110deg, #102029, #34515e);
+  color: #fff;
+}
+.imprint-wrap { width: min(100% - 44px, 960px); margin: 0 auto; padding: 42px 0 28px; }
+.legal-heading { display: flex; align-items: center; gap: 20px; }
+.legal-heading h1 { padding: 0; background: none; color: inherit; font-size: clamp(28px, 6vw, 40px); font-weight: 600; line-height: 1.2; letter-spacing: 0; }
+.back { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 44px; padding: 8px; color: inherit; text-decoration: none; }
+.back span { display: block; width: 15px; height: 15px; border-left: 5px solid; border-bottom: 5px solid; transform: rotate(45deg); }
+.imprint-content { margin: 48px 0 0; line-height: 1.5; font-size: 1rem; overflow-wrap: anywhere; }
+.imprint-content address { font-style: normal; }
+.imprint-content dl { margin: 0; }
+.imprint-content dl > div { margin-bottom: 24px; }
+.imprint-content dt, .imprint-content dd { margin: 0; font-weight: 400; }
+.imprint-content a { color: #7fd7e7; }
+.imprint-page .site-footer { padding: 80px 0 0; color: #dbe8ee; }
+@media (min-width: 800px) {
+  :root { background: #fff; }
+  .site { width: 100%; min-height: 100svh; margin: 0; border: 0; border-radius: 0; box-shadow: none; display: flex; flex-direction: column; }
+  .site-header { min-height: 88px; justify-content: start; padding-inline: max(40px, calc((100% - 1240px) / 2)); background: #fff; }
+  .brand { padding: 16px 0; }
+  .brand img { width: 100px; }
+  .site > main { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .landing-grid { width: min(100% - 80px, 1240px); margin-inline: auto; padding-block: 12px 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; background: none; }
+  .hero-art { width: 100%; max-width: 580px; aspect-ratio: 390 / 357; background: transparent; }
+  .offer-panel { min-width: 0; padding: 24px 0; text-align: left; }
+  .offer-panel h1 { padding: 0; background: none; font-size: clamp(32px, 3.8vw, 58px); line-height: 1.06; letter-spacing: -.035em; }
+  .offer { background: none; padding: 32px 0 0; width: 100%; max-width: 400px; margin: 0; }
+  .cta { min-height: 62px; font-size: 23px; }
+  .price { margin-top: 12px; text-align: center; font-size: .9375rem; }
+  .disclaimer { width: min(100% - 80px, 1000px); margin: 24px auto 0; padding: 0; line-height: 1.6; font-size: .9375rem; text-align: center; }
+  .site-footer { padding: 36px 40px 24px; }
+  .site-footer nav { gap: 4px 24px; }
+  .site-footer > p { margin-top: 14px; }
+  .imprint-wrap { padding-top: 62px; }
+  .imprint-content { padding: 0; background: none; color: inherit; border-radius: 0; font-size: 16px; }
+  .imprint-content a { color: #7fd7e7; }
+}
+@media (prefers-reduced-motion: reduce) { .cta { animation: none; } }
